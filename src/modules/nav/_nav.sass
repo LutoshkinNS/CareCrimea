@@ -1,0 +1,71 @@
+.nav
+	&__list
+		display: flex
+		align-items: center
+		justify-content: space-between
+		list-style-type: none
+		text-transform: uppercase
+		padding: 34px 0
+		padding-left: 0
+		margin: 0
+	&__item
+		margin-right: 30px
+		& a
+			text-decoration: none
+			color: $text-color
+			&:hover
+				color: $main-color
+			&:active
+				color: $active
+.nav--header
+	.nav
+		&__item
+			margin-right: 40px
+
+.nav--burger
+	.nav
+		&__list
+			z-index: 1010
+			background-color: $bg-color
+			flex-direction: column
+			justify-content: flex-start
+			align-items: start
+			padding-top: 65px
+			padding-left: 35px
+			padding-bottom: 35px
+		&__item
+			margin-bottom: 20px
+
+@media (max-width: 1200px)
+	.nav
+		&__list
+			font-size: 14px
+	.nav--header
+		.nav
+			&__item
+				margin-right: 15px
+
+@media (max-width: 1200px)
+	.nav
+		&__item
+			margin-right: 15px
+
+@media (max-width: 967px)
+	.nav
+		width: 100%
+		&__list
+			justify-content: space-between
+			padding-bottom: 0
+			flex-grow: 1
+		&__item
+			&:last-child
+				margin-right: 0
+
+@media (max-width: 547px)
+	.nav
+		&__list
+			flex-wrap: wrap
+			justify-content: center
+		&__item
+			margin-right: 30px
+			margin-bottom: 10px

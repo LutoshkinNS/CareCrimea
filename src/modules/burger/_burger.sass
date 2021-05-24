@@ -1,0 +1,59 @@
+.burger-menu
+	&__button
+		display: none
+		cursor: pointer
+		& svg
+			stroke: $text-color
+			fill: $text-color
+		& svg:hover
+			stroke: $main-color
+			fill: $main-color
+	&__popup
+		display: none
+	&__overlay
+		position: fixed
+		left: 0
+		top: 0
+		display: flex
+		justify-content: center
+		align-items: start
+		width: 100%
+		height: 100%
+		z-index: 1000
+		background-color: rgba(0,0,0,0.7)
+	&__close
+		position: absolute
+		z-index: 1020
+		top: 15px
+		right: 15px
+		width: 30px
+		height: 30px
+		cursor: pointer
+		&::before, &::after
+			position: absolute
+			top: 0
+			left: 50%
+			text-align: center
+			content: ''
+			height: 33px
+			width: 2px
+			background-color: $text-color
+		&::before
+			transform: rotate(45deg)
+		&::after
+			transform: rotate(-45deg)
+	&__close:hover
+		&::before, &::after
+			background-color: $main-color
+
+@media (max-width: 967px)
+	.burger-menu
+		&__button
+			display: block
+			margin-right: 30px
+
+@media (max-width: 547px)
+	.burger-menu
+		&__button
+			display: block
+			margin-right: 26px

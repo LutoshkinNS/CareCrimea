@@ -1,0 +1,49 @@
+.form
+	display: flex
+	flex-direction: column
+	input:focus
+		outline: none
+	&__input
+		max-width: 690px
+		height: 74px
+		margin-bottom: 15px
+		padding: 0 20px
+		border: none
+	&__comment
+		max-width: 690px
+		height: 120px
+		margin-bottom: 30px
+		padding: 17px 20px
+		border: none
+	&__button
+		margin-bottom: 20px
+	&__btn-caption
+		margin: 0
+		@include small-text
+
+@media (max-width: 1439px)
+	.form
+		&__input
+			height: 50px
+			font-size: 14px
+		&__comment
+			height: 120px
+			margin-bottom: 20px
+			font-size: 14px
+		&__btn-caption
+			font-size: 12px
+
+@media (max-width: 547px)
+	.form
+		&__input
+			height: 50px
+			margin-bottom: 15px
+			padding: 0 20px
+			border: none
+			font-size: 14px
+		&__comment
+			height: 120px
+			margin-bottom: 20px
+			font-size: 14px
+		&__btn-caption
+			font-size: 11px

@@ -1,0 +1,106 @@
+// @import ./src/sass/_colors
+// @import ./src/sass/_fonts
+// @import ./src/sass/_interface
+.delivery
+	position: relative
+	padding-top: 100px
+	margin-bottom: 65px
+	background-image: url("../img/delivery/bg-flowers.svg")
+	background-position-x: 100%
+	background-position-y: 85%
+	background-repeat: no-repeat
+	&-block
+		display: flex
+	&__image
+		max-width: 600px
+		margin-right: 120px
+	&__desc
+		max-width: 656px
+	&__title
+		margin: 0
+		@include title
+	&__subtitle
+		margin-top: 50px
+		margin-bottom: 50px
+		@include subtitle-text
+	&__list-title
+		margin: 0
+		margin-bottom: 20px
+		font-size: 25px
+		font-weight: 600
+	&__list
+		margin: 0
+		margin-bottom: 50px
+		padding-left: 23px
+	&__item
+		margin-bottom: 10px
+		line-height: 27px
+		@include large-text
+	&__list--little
+		padding-left: 23px
+		line-height: 20px
+	&__list--little:last-child
+		margin-bottom: 0
+
+@media (max-width: 1439px)
+	.delivery
+		&__image
+			max-width: 600px
+			margin-right: 30px
+		&__desc
+			max-width: 550px
+		&__list-title
+			font-size: 22px
+		&__item
+			margin-bottom: 10px
+			line-height: 22px
+			font-size: 16px
+
+@media (max-width: 1200px)
+	.delivery
+		&__desc
+			max-width: 450px
+		&__subtitle
+			margin: 40px 0
+			font-size: 35px
+			line-height: 45px
+		&__list-title
+			font-size: 18px
+		&__list
+			margin-bottom: 40px
+		&__item
+			margin-bottom: 10px
+			line-height: 27px
+			font-size: 16px
+
+@media (max-width: 967px)
+	.delivery
+		padding-top: 50px
+		margin-bottom: 50px
+		&-block
+			flex-direction: column-reverse
+			align-items: center
+		&__image
+			display: none
+		&__desc
+			max-width: 100%
+
+@media (max-width: 547px)
+	.delivery
+		background: none
+		background-color: $bg-color
+		&__title
+			font-size: 14px
+		&__subtitle
+			margin: 30px 0
+			font-size: 25px
+			line-height: 35px
+		&__list-title
+			font-size: 16px
+			margin-bottom: 15px
+		&__list
+			margin-bottom: 30px
+		&__item
+			line-height: 21px
+			font-size: 14px
+			margin-bottom: 10px

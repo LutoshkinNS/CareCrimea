@@ -1,0 +1,88 @@
+*, *:before, *:after
+	box-sizing: border-box
+body
+	font-family: 'Montserrat', sans-serif
+	font-style: normal
+	font-weight: 400
+	font-size: 16px
+img
+	max-width: 100%
+@mixin events-link
+	&:hover
+		color: $hover
+	&:focus
+		outline: none
+	&:active
+		color: $active
+@mixin title
+	text-transform: uppercase
+	color: $main-color
+	letter-spacing: 0.08em
+	@include large-text
+.container
+	position: relative
+	max-width: 1440px
+	margin: 0 auto
+	padding: 0 15px
+.button-link
+	padding: 0px
+	background: none
+	border: none
+	border-bottom: 1px solid
+	color: $main-color
+.button
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 25px 44px
+	width: 280px
+	height: 66px
+	text-transform: uppercase
+	font-family: 'Montserrat', sans-serif
+	font-style: normal
+	font-weight: 500
+	font-size: 16px
+	color: $text-button
+	background-color: $main-color
+	border-radius: 50px
+	border: none
+	cursor: pointer
+	&:hover
+		background-color: $hover
+	&:focus
+		outline: none
+		border: 3px solid #000
+	&:active
+		background-color: $active
+		outline: none
+.lock
+	overflow: hidden
+.hidden
+	display: none
+
+@media (max-width: 1439px)
+	.container
+		max-width: 1170px
+
+@media (max-width: 1200px)
+	.container
+		max-width: 960px
+	.button
+		padding: 10px 20px
+		width: 240px
+		height: 60px
+		font-size: 14px
+
+@media (max-width: 967px)
+	.container
+		max-width: 720px
+
+@media (max-width: 547px)
+	.container
+		max-width: 540px
+		padding: 0 10px
+	.button
+		padding: 10px 20px
+		width: 210px
+		height: 50px
+		font-size: 14px
